@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivinha?</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <section>
+        <h1>adivinhe</h1>
+        <p>qual é o número da</p>
+        <p>SORTE</p>
+        <p>da maior estrela pop da atualidade</p>
+      </section>
+      <section>
+        <button v-on:click="addNumber(-1)">-1</button>
+        <button v-on:click="addNumber(1)">+1</button>
+        <button v-on:click="addNumber(2)">+2</button>
+        <button v-on:click="addNumber(10)">+10</button>
+      </section>
+
+      <p v-if="wasClicked">{{ showResult }}</p>
+      <!-- <p>{{ count }}</p> -->
+      <div v-if="showInfo">
+        <p>Eu nasci no dia 13.</p>
+        <p>Fiz 13 anos numa sexta-feira 13.</p>
+        <p>Meu primeiro álbum foi ouro em 13 semanas.</p>
+        <p>
+          Minha primeira música de número #1 teve uma introdução de 13 segundos,
+        </p>
+        <p>e eu nem fiz isso de propósito!</p>
+      </div>
+    </main>
+  </body>
+</html>
